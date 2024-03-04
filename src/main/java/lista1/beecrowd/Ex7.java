@@ -14,7 +14,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
 package lista1.beecrowd;
 
 /**
@@ -23,6 +22,34 @@ package lista1.beecrowd;
  * @date 03/03/2024
  * @brief Class Ex7
  */
+import java.util.*;
+
 public class Ex7 {
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in); //metodo para leitura de dados informado pelo usuario
+
+        //um laco de repeticao que ira repetir ate que seja falso ou brecado/parado/interrompido
+        while (true) {
+            //leitura de dados das variaveis
+            int x = ler.nextInt();
+            int y = ler.nextInt();
+            //verificando as condicoes
+            if (x == 0 || y == 0) {
+                break;//comando para interromper o codigo inteiro
+            }
+            //condicao de validacao
+            if (x > 0 && y > 0) {
+                System.out.println("primeiro");
+            } else if (x < 0 && y > 0) {
+                System.out.println("segundo");
+            } else if (x < 0 && y < 0) {
+                System.out.println("terceiro");
+            } else if (x > 0 && y < 0) {
+                System.out.println("quarto");
+            }
+        }
+
+    }
 
 }

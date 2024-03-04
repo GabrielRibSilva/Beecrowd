@@ -14,7 +14,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
 package lista1.beecrowd;
 
 /**
@@ -23,6 +22,23 @@ package lista1.beecrowd;
  * @date 03/03/2024
  * @brief Class Ex8
  */
+import java.util.*;
+
 public class Ex8 {
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);//metodo para ler dados informado pelo usuario
+        //variavel
+        int N;
+        //leitura de variavel
+        N = ler.nextInt();
+        //laco de repeticao
+        for (int i = 1; i <= N; i++) {
+            if (N % i == 0) { //condicional de validacao, para imprimir para o usuario/
+                System.out.println(i);
+            }
+        }
+
+    }
 
 }

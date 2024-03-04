@@ -14,7 +14,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
 package lista1.beecrowd;
 
 /**
@@ -23,6 +22,37 @@ package lista1.beecrowd;
  * @date 03/03/2024
  * @brief Class Ex10
  */
+import java.util.*;
+
 public class Ex10 {
+
+    public static void main(String[] args) {
+
+        Scanner ler = new Scanner(System.in);// metodo da biblioteca importada para ler dados
+        //metodo de repeticao
+        while (ler.hasNext()) {
+            //.hasNext e para ler muitas entradas de uma so vez sem para e ter q usar diversas linhas de codigo usando o metodo Scanner
+            int L = ler.nextInt(); //declarando e lendo a variavel
+            int maxVelocidade = 0;
+
+            //laco de repeticao para q ira continuar ate q o i seja igual ao L
+            for (int i = 0; i < L; i++) {
+                int velocidade = ler.nextInt();
+                if (velocidade > maxVelocidade) {
+                    maxVelocidade = velocidade;
+                }
+            }
+
+            //verificando em qual nivel de velocidade o numero indicado esta.
+            if (maxVelocidade < 10) {
+                System.out.println("1");
+            } else if (maxVelocidade < 20) {
+                System.out.println("2");
+            } else {
+                System.out.println("3");
+            }
+        }
+
+    }
 
 }

@@ -14,7 +14,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
 package lista1.beecrowd;
 
 /**
@@ -23,6 +22,20 @@ package lista1.beecrowd;
  * @date 03/03/2024
  * @brief Class Ex1
  */
+import java.util.*; //importando bliblioteca para usar o Scanner
+
 public class Ex1 {
 
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        //pegando os segundos informador para o calculo
+        int s = ler.nextInt(); //declarando variavel e lendo ela
+        //declarando variaveis
+        int h = s / 3600; //convertendo segundos em hora
+        int m = (s % 3600) / 60; //copnvertendo segundos em minutos
+        int st = (s % 3600) % 60; // resto dos segundos
+
+        System.out.printf("%d:%d:%d%n", h, m, st); //saida de dados
+
+    }
 }
